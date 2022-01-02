@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# DeliSpice - (Restaurant Management app)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[View source](https://github.com/HanMoeHtet/delispice) &nbsp;&nbsp; [Visit site](https://restaurant-dev-eda52.web.app/)
 
-## Available Scripts
+DeliSpice is a web app that you can use to mange your restaurant and serve your delicious food. You can add menu for your restaurant. Search in the menu and sort them based on name and price, etc. Customers can also view your menu except they don't have permissions to mangage it.
 
-In the project directory, you can run:
+## Home page of the app
+![Home Page](./screenshots/homepage.png)
 
-### `npm start`
+## Sign up page
+![Sign up Page](./screenshots/signup_page.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Log in page
+![Log in Page](./screenshots/login_page.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Create restaurant page
+![Create Restaurant page](./screenshots/create_restaurant_page.png)
 
-### `npm test`
+## Create Dish
+![Create Dish](./screenshots/create_dish.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Search in menu
+![Search in Menu](./screenshots/search.png)
 
-### `npm run build`
+## Restaurant Page with search result 
+--- 
+![Search Result](./screenshots/search_result.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Public view (from customer's perspective)
+![Public view](./screenshots/public_view.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Get Started 
+### Clone the repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    git clone https://github.com/HanMoeHtet/delispice && cd delispice
 
-### `npm run eject`
+### Create .env file and fill in the environment variables
+    cp .env.example .env
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### You can seed data if you want
+    npm run seed
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Run the app
+    npm run start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Credits
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Icons from [https://fontawesome.com](https://fontawesome.com)
+- Dummy images from the Internet
+- Fake menu data from [https://www.themealdb.com](www.themealdb.com)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
