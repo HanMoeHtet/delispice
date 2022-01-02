@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useAuth } from 'src/composables/auth';
 import { Dish as DishType } from 'src/services/firestore/dish';
 import { RestaurantWithMenu } from 'src/services/firestore/user';
-import { theme } from 'src/theme';
 import CreateDishButton from '../CreateDishButton';
 import Dish from '../Dish';
 import SearchInput from '../SearchInput';
@@ -73,10 +72,7 @@ const Menu: React.FC<MenuProps> = ({ restaurant }) => {
   return (
     <div className="rounded overflow-hidden bg-white p-4 sm:p-8">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 px-4">
-        <h3
-          className="text-2xl font-bold mb-4 sm:mb-8 md:mb-0"
-          style={{ color: theme.colors.primary }}
-        >
+        <h3 className="text-2xl font-bold mb-4 sm:mb-8 md:mb-0 text-primary">
           Menu
         </h3>
 

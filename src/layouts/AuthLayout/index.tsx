@@ -1,16 +1,12 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from 'src/components/Logo';
-import { theme } from 'src/theme';
 
 interface AuthLayoutProps {}
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
-    <div
-      className="min-h-screen w-full flex flex-col justify-center items-center py-20"
-      style={{ backgroundColor: theme.colors.secondary }}
-    >
+    <div className="min-h-screen w-full flex flex-col justify-center items-center py-20 bg-secondary">
       <header className="mb-8">
         <Link to="/">
           <Logo />

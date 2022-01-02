@@ -8,6 +8,7 @@ export interface Restaurant {
   name: string;
   address: string;
   photo: string;
+  phone: string;
 }
 
 export interface CreateRestaurantData extends Omit<Restaurant, 'id'> {

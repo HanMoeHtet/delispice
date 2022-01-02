@@ -1,10 +1,9 @@
+import _ from 'lodash';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Modal } from 'src/composables/modals';
 import Close from '../icons/Close';
 import Search from '../icons/Search';
-import _ from 'lodash';
-import { theme } from 'src/theme';
 
 interface SearchModalProps extends React.ComponentProps<typeof Modal> {
   getResult: (searchText: string) => string[];
@@ -40,12 +39,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
     <Modal {...modalProps}>
       <div className="mx-auto sm:w-1/2 bg-white p-4">
         <div className="flex justify-between items-center mb-6">
-          <h3
-            className="font-bold text-2xl"
-            style={{ color: theme.colors.primary }}
-          >
-            Search in Menu
-          </h3>
+          <h3 className="font-bold text-2xl text-primary">Search in Menu</h3>
           <button onClick={modalProps.onClose} className="">
             <Close aria-label="close" className="h-6 text-gray-500" />
           </button>

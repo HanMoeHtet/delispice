@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #e2293f;
+  --secondary-color: #1d1c1cd9;
+  --tertiary-color: hsl(44deg 97% 48%);
+  --tertiary-color-light: rgb(209, 176, 87);
+}
+
 input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,
