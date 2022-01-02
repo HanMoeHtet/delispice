@@ -24,13 +24,7 @@ const SignInWithGoogle: React.FC<SignInWithGoogleProps> = ({
 
   return (
     <div>
-      <GoogleButton
-        onClick={handleClick}
-        style={{
-          lineHeight: ' !important',
-        }}
-        {...rest}
-      />
+      <GoogleButton onClick={handleClick} {...rest} />
       {error && <p className="text-red-500 text-xs italic">{error}</p>}
     </div>
   );
