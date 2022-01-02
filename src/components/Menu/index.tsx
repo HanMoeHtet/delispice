@@ -71,16 +71,16 @@ const Menu: React.FC<MenuProps> = ({ restaurant }) => {
   }, [allMenu, searchText, sortBy, orderBy]);
 
   return (
-    <div className="max-w-4xl mx-auto rounded overflow-hidden bg-white p-8">
-      <div className="flex justify-between items-center mb-16 px-4">
+    <div className="rounded overflow-hidden bg-white p-4 sm:p-8">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-8 px-4">
         <h3
-          className="text-2xl font-bold"
+          className="text-2xl font-bold mb-4 sm:mb-8 md:mb-0"
           style={{ color: theme.colors.primary }}
         >
           Menu
         </h3>
 
-        <div className="flex items-center">
+        <div className="flex flex-col gap-y-4 sm:flex-row sm:gap-y-0 sm:gap-x-3 items-center">
           {user && (
             <CreateDishButton
               restaurant={restaurant}
@@ -91,14 +91,12 @@ const Menu: React.FC<MenuProps> = ({ restaurant }) => {
               }}
             />
           )}
-          <div className="mx-4">
-            <SortByDropdown
-              sortByValue={sortBy}
-              onSortByValueUpdate={setSortBy}
-              orderByValue={orderBy}
-              onOrderByValueUpdate={setOrderBy}
-            />
-          </div>
+          <SortByDropdown
+            sortByValue={sortBy}
+            onSortByValueUpdate={setSortBy}
+            orderByValue={orderBy}
+            onOrderByValueUpdate={setOrderBy}
+          />
           <SearchInput
             value={searchText}
             onUpdate={setSearchText}
@@ -120,7 +118,7 @@ const Menu: React.FC<MenuProps> = ({ restaurant }) => {
           No result for <span className="font-bold">{searchText}</span>
         </p>
       ) : (
-        <div className="grid grid-cols-3 justify-items-center gap-y-8 gap-x-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-items-center gap-y-8 gap-x-8">
           {filteredMenu.map((dish) => {
             return <Dish key={dish.id} {...dish} />;
           })}

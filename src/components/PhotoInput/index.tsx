@@ -64,7 +64,7 @@ const PhotoInput: React.FC<PhotoInputProps> = ({
           </button>
         </div>
       ) : (
-        <label className="w-44 mx-auto flex flex-col items-center p-4 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white">
+        <label className="w-44 max-w-full mx-auto flex flex-col items-center p-4 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white">
           <svg
             className="w-8 h-8"
             fill="currentColor"

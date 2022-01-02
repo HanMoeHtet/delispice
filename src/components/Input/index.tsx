@@ -21,9 +21,11 @@ const Input: React.FC<InputProps> = ({
   ...inputProps
 }) => {
   return (
-    <div className={`mb-6 ${classes?.container}`}>
+    <div className={`mb-6 ${classes?.container || ''}`}>
       <label
-        className={`block text-gray-700 text-sm font-bold mb-2 ${classes?.label}`}
+        className={`block text-gray-700 text-sm font-bold mb-2 ${
+          classes?.label || ''
+        }`}
         htmlFor={id}
       >
         {label}

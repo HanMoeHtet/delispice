@@ -142,9 +142,6 @@ const SignUpForm: React.FC<SignUpFormProps> = () => {
       <OrDivider />
       <SignInWithGoogle
         className="mx-auto max-w-full"
-        style={{
-          lineHeight: 'unset !important',
-        }}
         label="Continue with Google"
         onClick={async () => {
           clear();

@@ -113,7 +113,7 @@ const RestaurantForm: React.FC<RestaurantFormProps> = () => {
 
   return (
     <motion.div
-      className="bg-white shadow-md rounded px-8 pt-6 pb-8"
+      className="bg-white shadow-md rounded px-4 sm:px-8 pt-6 pb-8"
       initial={{ translateX: '90%' }}
       animate={{ translateX: 0 }}
       transition={{

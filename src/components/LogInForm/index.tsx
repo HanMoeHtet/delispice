@@ -49,7 +49,7 @@ const LogInForm: React.FC<LogInFormProps> = () => {
   };
 
   return (
-    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8">
+    <div className="bg-white shadow-md rounded px-4 sm:px-8 pt-6 pb-8">
       <div className="text-center mb-8">
         <h2 className="text-gray-700 text-3xl font-bold mb-3">Log In</h2>
         {errorMessage !== '' && (
@@ -101,7 +101,7 @@ const LogInForm: React.FC<LogInFormProps> = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col gap-y-4 sm:flex-row sm:gap-y-0 justify-between items-center">
                 <Link
                   to="/signup"
                   className="text-blue-500 font-bold hover:text-blue-700 hover:underline"
@@ -122,7 +122,7 @@ const LogInForm: React.FC<LogInFormProps> = () => {
       </Formik>
       <OrDivider />
       <SignInWithGoogle
-        className="mx-auto"
+        className="mx-auto max-w-full"
         label="Continue with Google"
         onClick={async () => {
           clear();

@@ -38,7 +38,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
 
   return (
     <Modal {...modalProps}>
-      <div className="mx-auto w-1/2 bg-white p-5">
+      <div className="mx-auto sm:w-1/2 bg-white p-4">
         <div className="flex justify-between items-center mb-6">
           <h3
             className="font-bold text-2xl"
@@ -65,28 +65,26 @@ const SearchModal: React.FC<SearchModalProps> = ({
             />
           </label>
         </form>
-        <div>
-          {result.length === 0 ? (
-            <p className="text-sm text-center text-gray-500">No result</p>
-          ) : (
-            <ul>
-              {result.map((name, index) => {
-                return (
-                  <li key={name + index} className="">
-                    <Link
-                      onClick={modalProps.onClose}
-                      to={{ search: getResultLink(name) }}
-                      className="flex items-center hover:bg-gray-200 text-gray-500 py-2 px-5 mb-3"
-                    >
-                      <Search className="h-4 mr-4" />
-                      <span> {name[0].toUpperCase() + name.slice(1)}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-        </div>
+        {result.length === 0 ? (
+          <p className="text-sm text-center text-gray-500">No result</p>
+        ) : (
+          <ul>
+            {result.map((name, index) => {
+              return (
+                <li key={name + index} className="">
+                  <Link
+                    onClick={modalProps.onClose}
+                    to={{ search: getResultLink(name) }}
+                    className="flex items-center hover:bg-gray-200 text-gray-500 py-2 px-5 mb-3"
+                  >
+                    <Search className="h-4 mr-4" />
+                    <span> {name[0].toUpperCase() + name.slice(1)}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </div>
     </Modal>
   );

@@ -13,10 +13,10 @@ const RestaurantInfo: React.FC<RestaurantInfoProps> = ({ restaurant }) => {
   const { user } = useAuth();
 
   return (
-    <div className="flex max-w-4xl mx-auto rounded overflow-hidden mb-5">
-      <div className="flex flex-col w-1/2 bg-white py-5 px-5">
+    <div className="flex flex-col-reverse sm:flex-row rounded overflow-hidden mb-5">
+      <div className="flex flex-col sm:w-1/2 bg-white py-5 px-5">
         <h2
-          className="font-bold text-3xl mb-auto"
+          className="font-bold text-3xl mb-4 sm:mb-auto"
           style={{ color: theme.colors.primary }}
         >
           {restaurant.name}
@@ -32,7 +32,7 @@ const RestaurantInfo: React.FC<RestaurantInfoProps> = ({ restaurant }) => {
           <p className="text-sm">{restaurant.address}</p>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="sm:w-1/2">
         <img src={restaurant.photo} alt={restaurant.name} className="w-full" />
       </div>
     </div>

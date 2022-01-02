@@ -44,9 +44,11 @@ const Profile: React.FC<ProfileProps> = ({ user }) => {
           alt={displayName}
           className="h-8 rounded-full mr-2 border border-tertiary"
         />
-        <p className="font-bold">{displayName}</p>
+        <p className="font-bold" style={{ overflowWrap: 'anywhere' }}>
+          {displayName}
+        </p>
         <Chevron
-          className={`-mr-1 ml-2 h-5 w-5 ${
+          className={`-mr-1 ml-2 h-8 w-8 sm:h-5 sm:w-5 ${
             isMenuOpen ? '' : '-rotate-90'
           } transition-transform duration-150 ease-out`}
         />

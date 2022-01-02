@@ -7,7 +7,7 @@ interface DishProps extends DishType {}
 
 const Dish: React.FC<DishProps> = ({ name, phone, photo, price }) => {
   return (
-    <div className="w-full rounded overflow-hidden">
+    <div className="w-full max-w-xs rounded overflow-hidden">
       <img src={photo} alt={name} className="" />
       <div className="bg-gray-100 p-3">
         <h4

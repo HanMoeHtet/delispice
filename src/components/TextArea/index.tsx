@@ -23,7 +23,9 @@ const TextArea: React.FC<TextAreaProps> = ({
   return (
     <div className={`mb-6 ${classes?.container}`}>
       <label
-        className={`block text-gray-700 text-sm font-bold mb-2 ${classes?.label}`}
+        className={`block text-gray-700 text-sm font-bold mb-2 ${
+          classes?.label || ''
+        }`.trim()}
         htmlFor={id}
       >
         {label}
@@ -32,7 +34,7 @@ const TextArea: React.FC<TextAreaProps> = ({
         className={`resize-none shadow appearance-none border rounded leading-loose  ${
           errorMessage !== '' && 'border-red-500 mb-3'
         } w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline ${
-          classes?.textArea
+          classes?.textArea || ''
         }`}
         id={id}
         name={name}

@@ -10,7 +10,7 @@ const NavBar: React.FC<NavBarProps> = () => {
   const { user } = useAuth();
 
   return (
-    <nav className="w-full flex justify-between items-center">
+    <nav className="w-full flex flex-col gap-y-4 sm:flex-row sm-gap-y-0 justify-between items-center">
       <Link to="/">
         <Logo />
       </Link>
