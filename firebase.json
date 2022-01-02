@@ -3,7 +3,8 @@
     "public": "build",
     "ignore": [
       "firebase.json",
-      "**/.*",
+      ".firebaserc",
+      "NOTES.md",
       "**/node_modules/**"
     ],
     "rewrites": [
